@@ -1,0 +1,4 @@
+terminal
+git add .
+git commit -m 'pesan apa yang di ubah'
+git push
