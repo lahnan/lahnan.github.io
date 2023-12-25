@@ -1,0 +1,33 @@
+body {
+  background-color: rgb(21 94 117);
+}
+
+.foto {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.container {
+  margin: 10px;
+}
+
+.card {
+  width: 1570px;
+}
+
+@media only screen and (max-width: 991px) {
+  .card {
+    width: 380px;
+  }
+}
+
+@media only screen and (max-width: 394px) {
+  .card {
+    width: 350px;
+  }
+}

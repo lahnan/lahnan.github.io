@@ -1,6 +1,6 @@
 :root {
-  --primary: #2b72bd;
-  --bg: #005a7e;
+  --primary: #2828ff;
+  --bg: #3137ae;
 }
 
 * {
@@ -24,7 +24,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: rgba(129, 192, 217, 0.71);
+  background-color: rgba(2, 7, 91, 0.71);
   border-bottom: 1px solid #0c2a4a;
   position: fixed;
   top: 0;
@@ -86,7 +86,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('../img/back.png');
+  background-image: url("../img/night-sky.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -98,9 +98,9 @@ body {
   max-width: 60rem;
 }
 
-.hero .content h1{
+.hero .content h1 {
   font-size: 5em;
-  color:#fff;
+  color: #fff;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
 }
@@ -174,7 +174,7 @@ body {
   }
 
   .navbar .navbar-nav a::after ::hover {
-    transform:scaleX(0.2);
+    transform: scaleX(0.2);
   }
 }
 
