@@ -1,5 +1,6 @@
 body {
   background-color: rgb(21 94 117);
+  height: auto;
 }
 
 .foto {
@@ -16,18 +17,21 @@ body {
   margin: 10px;
 }
 
-.card {
+.cardnm {
+  background-color: #ffffff;
   width: 1570px;
+  display: flex;
+  flex-direction: row;
 }
 
 @media only screen and (max-width: 991px) {
-  .card {
-    width: 380px;
+  .cardnm {
+    width: 330px;
   }
 }
 
 @media only screen and (max-width: 394px) {
-  .card {
-    width: 350px;
+  .cardnm {
+    width: 320px;
   }
 }
