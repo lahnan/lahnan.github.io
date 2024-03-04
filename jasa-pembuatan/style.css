@@ -9,6 +9,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container p {
     font-size: 14px;
 }
