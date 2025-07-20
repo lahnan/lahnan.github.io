@@ -1,0 +1,537 @@
+@font-face {
+    font-family: BitcountGridSingle;
+    src: url(../fonts/BitcountGridSingle-Light.ttf);
+}
+
+@font-face {
+    font-family: FiraCode;
+    src: url(../fonts/FiraMonoNerdFontMono-Regular.otf);
+}
+
+@font-face {
+    font-family: IBMPlexSerif;
+    src: url(../fonts/IBMPlexSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: IBMPlexSerif;
+    src: url(../fonts/IBMPlexSerif-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: IBMPlexSerif;
+    src: url(../fonts/IBMPlexSerif-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* body {
+    font-family: Roboto ,Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    
+} */
+
+body[data-mode="day"] {
+    color: #0f0f0f;
+    background-color: #D8E9F8;
+}
+
+body[data-mode="night"] {
+    color: #ffffff;
+    background-color: #0f0f0f;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    background-color: #ffffff;
+    color: #060032;
+}
+
+button:hover {
+    background-color: #ffffff58;
+}
+
+#cta {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#cta[data-mode="night"] {
+    background-color: #000d36;
+    color: #ffffff;
+}
+
+#cta[data-mode="day"] {
+    background-color: #d8e9f8;
+    color: #060032;
+}
+
+.cta-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gallery {
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    height: 80vh;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 30pt;
+    font-weight: 600;
+    font-family: FiraCode,Arial, Helvetica, sans-serif;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 330px;
+    flex-wrap: wrap;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+.card {
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card a {
+    font-size: 16pt;
+    font-weight: 400;
+    color: #2E90FF;
+}
+
+.card img {
+    max-width: 150px;
+}
+
+.cta-title {
+    font-family: IBMPlexSerif,Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 30pt;
+    z-index: 3;
+}
+
+.cta-title span {
+    font-style: italic;
+}
+
+.cta-subtitle {
+    font-family: IBMPlexSerif,Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    z-index: 3;
+}
+
+.cta-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    z-index: 3;
+}
+
+
+@keyframes sun {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(1.27);
+}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
+
+nav {
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    z-index: 7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    flex-wrap: wrap;
+}
+
+nav[data-mode="night"] {
+    background-color: #000000a3;
+    color: #ffffff;
+}
+
+nav[data-mode="day"] {
+    background-color: #2e90ff;
+    color: #ffffff;
+}
+
+.nav-title {
+    width: 120px;
+    font-family: BitcountGridSingle,Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 25pt;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-button {
+    width: 280px;
+}
+
+#contact {
+    padding: 70px;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#contact[data-mode="night"] {
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+#contact[data-mode="day"] {
+    background-color: #e9f5ff;
+    color: #060032;
+}
+
+#project {
+    padding: 70px;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow-y: visible;
+}
+
+#project[data-mode="night"] {
+    background-color: #000000;
+    color: #0f0;
+}
+
+#project[data-mode="day"] {
+    background-color: #dceaf7;
+    color: #007e08;
+}
+
+.pages-names {
+    font-family: BitcountGridSingle,Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.pages-project {
+    font-family: FiraCode,Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+#repoList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-wrap: wrap;
+    
+    min-height: 100vh;
+    height: auto;
+
+}
+
+.repo {
+    font-family: FiraCode,Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    max-width: 100%;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+    overflow-x: visible;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    width:90vw;
+    justify-content: space-between;
+}
+
+.nav-icon-button {
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.repoUrl {
+    color: #00ff00; /* atau warna kontras lain */
+    text-decoration: underline;
+}
+
+span.repo {
+    display: block;
+}
+
+.nav-responsive {
+    display: none;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 5;
+    background-color: #000000d3;
+}
+
+.nav-responsive a {
+    width: 90%;
+}
+
+.nav-responsive a button {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+}
+
+@media only screen and (max-width: 785px) {
+    .cta-title {
+        font-size: 22pt;
+    }
+
+    .gallery {
+        width: 100%;
+        max-width: 220px;
+        min-width: 220px;
+        height: 48%;
+    }
+
+    .card img {
+    max-width: 100px;
+    }
+
+    .cta-text {
+        width: 100%;
+        height: 52%;
+        min-width: unset;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    #cta {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .nav-button {
+        display: none;
+    }
+
+    .nav-icon-button {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .gallery {
+        max-width: 270px;
+        width: 100%;
+    }
+
+    .card img {
+        max-width: 175px;
+    }
+
+    .cta-text {
+        width: 100%;
+    }
+    
+    .repo {
+        flex-direction: column; /* tetap pakai ini */
+        align-items: flex-start; /* biar tulisan kiri semua */
+    }
+
+    .repoUrl {
+        align-self: flex-start; /* biar "Open" tetap ke kiri */
+        margin-left: 10px;       /* kasih jarak biar ga dempet */
+    }
+
+    #repoList {
+        gap: 20px;
+        padding-left: 20px; /* biar ga mepet layar */
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    button {
+        padding: 8px;
+    }
+
+    .gallery {
+        width: 290px;
+    }
+
+    .card img {
+    max-width: 130px;
+    }
+
+    #nav-running {
+        display: none;
+    }
+
+    .repo span {
+        font-size: 13pt;
+    }
+
+    #contact a button {
+        padding: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 460px) {
+    #cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cta-text {
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cta-title {
+        font-size: 20pt;
+    }
+
+    .cta-subtitle {
+        font-size: 17pt;
+    }
+
+    .gallery {
+        height: 60vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gallery-container {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .card img {
+        max-width: 110px;
+    }
+    
+    .repo span {
+        font-size: 9pt;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        width: 100%;
+    }
+
+    .repoUrl {
+        align-self: flex-start;
+        margin-left: 0;
+        padding-left: 5px; 
+    }
+
+    .repo {
+        margin: 0;
+    }
+
+    #repoList {
+        gap: 20px;
+        padding-left: 5px;
+        padding-right: 20px;
+    }
+
+    #contact a button {
+        padding: 10px;
+        width: 300px;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+}

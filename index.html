@@ -3,42 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi.</title>
+    <title>Lahnan Adi S.</title>
 
-    <!-- style -->
-    <link rel="stylesheet" href="./custom/css/main.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="shortcut icon" href="./asset/img/favicon.ico" type="image/x-icon">
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 </head>
-<body>
-    <div class="introduction">
-        <div class="text">
-            <h1>Hi</h1>
-            <h2>I'm Lahnan <span>&block;</span></h2>
-            <br>
-            <div class="button">
-                <a href="#about"><button 
-                    id="hoverButton"
-                    onclick="redirectToRandomWebsite()"
-                    >About Me?</button></a>
+<body data-mode="day">
+    
+    <nav data-mode="day">
+        <a href="https://github.com/lahnan" class="nav-title">LAHNAN</a>
+        
+        <div class="nav-button">
+            <a href="#cta"><button>Home</button></a>
+            <a href="#project"><button>Project</button></a>
+            <a href="#contact"><button>Linktree</button></a>
+            <button onclick="changeMode()">
+                <i class="bi bi-arrow-clockwise" id="modeIconN"></i>
+            </button>
+        </div>
+        
+        <div class="nav-icon-button">
+            <button onclick="changeMode()">
+                <i class="bi bi-arrow-clockwise" id="modeIconP"></i>
+            </button>
+            <button id="showNav" onclick="showNav()"><i class="bi bi-list" id="showNavIcon"></i></button>
+        </div>
+
+    </nav>
+
+    <div class="nav-responsive" data-mode="day">
+        <a href="#cta"><button>Home</button></a>
+        <a href="#project"><button>Project</button></a>
+        <a href="#contact"><button>Linktree</button></a>
+    </div>
+
+    <div id="cta" data-mode="day">
+        <!-- Name Title -->
+        <div class="cta-text">
+            <div class="cta-title">
+                Hi My Name Is <span>Lahnan</span>
+            </div>
+            <div class="cta-subtitle">13y/o web dev</div>
+            <div class="cta-nav">
+                <a href="#contact"><button>Contact</button></a>
+                <a href="#project"><button>Project</button></a>
             </div>
         </div>
+
+        <div class="gallery">
+                Gallery
+                <div class="gallery-container">
+                    <div class="card">
+                        <img src="./asset/img/gallery/httpsgithub.comlahnancourseDeajsbasic.png" alt="image"/>
+                        <a href="https://github.com/lahnan/courseDeajsbasic">Open</a>
+                    </div>
+                    <div class="card">
+                        <img src="./asset/img/gallery/httpsgithub.comlahnanbmkgLatestEarthquake.png" alt="image"/>
+                        <a href="https://github.com/lahnan/bmkgLatestEarthquake">Open</a>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    
+    <div id="project" data-mode="day">
+        <div class="pages-project">
+            /Project
+        </div>
+
+        <div class="project-container"> 
+            <ul id="repoList">
+                <li id="getData" class="repo"></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="contact" data-mode="day">
+        <div class="pages-names">
+            Linktree
+        </div>
+        <a href="https://github.com/lahnan"><button>Github</button></a>
+        <a href="https://www.instagram.com/lahnan_adi/"><button>Instagram</button></a>
+        <a href="https://www.youtube.com/@LahnanAdiS"><button>youtube</button></a>
+        <a href=""><button>facebook</button></a>
+        <a href="https://scratch.mit.edu/users/Lahnan/"><button>Scratch</button></a>
     </div>
 
-    <div class="footer">
-        <h2>hello world</h2>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="./pages/project/">Project</a></li>
-            <li><a href="./pages/link-tree/">Link Tree</a></li>
-        </ul>
-
-        <span>Created Using Hand By Lahnan</span>
-    </div>
-    <script src="./script.js"></script>
+    <script src="./asset/js/script.js"></script>
+    
 </body>
 </html>
